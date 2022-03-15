@@ -1,0 +1,66 @@
+*{
+    /* */
+    margin: 0; /* quita todos los margenes*/
+
+}
+body{
+    background-color: blue;
+}
+
+.container{
+    
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+
+.zoom__info *{
+    width: 100%;
+    margin: 0;
+    z-index: -1;
+    position: absolute;
+}
+
+/*After */
+.zoom__info::after{
+    content: "+";
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    
+    position: absolute;
+   margin-top: 100px;
+   margin-left: 100px;
+
+    border: 1px solid #fff;
+    width: 40px;
+    height: 40;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0, 0.6);
+
+}
+
+.zoom__info::after:hover::after{ /*identifica el efecto encima del mouse, del elemento y ejecuta una accion*/
+    display: block;
+    cursor: pointer;
+    
+}
+
+/*clase de imagenes */
+.content__img{
+    /* colocamos tamaños absolutos*/
+    width: 250px;  /*ponemos tamaños absolutos con px */
+    height: 250px; /*altura */
+}
+
+.content__img:hover{
+    transform: scale(2.1); /*vista previa de zoom */
+    transition: 0.9s;
+    
+}
+
